@@ -1,0 +1,90 @@
+{
+    "requests": [
+      {
+        "name": "Criar Usuário",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"nome\": \"Nome do Usuário\",\n  \"email\": \"email@example.com\",\n  \"senha\": \"senha123\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/api/usuarios",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "usuarios"]
+          }
+        }
+      },
+      {
+        "name": "Obter Todos os Usuários",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:3000/api/usuarios",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "usuarios"]
+          }
+        }
+      },
+      {
+        "name": "Obter Usuário por ID",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:3000/api/usuarios/1",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "usuarios", "1"]
+          }
+        }
+      },
+      {
+        "name": "Atualizar Usuário",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"nome\": \"Nome Atualizado\",\n  \"email\": \"email@example.com\",\n  \"senha\": \"senha456\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/api/usuarios/1",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "usuarios", "1"]
+          }
+        }
+      },
+      {
+        "name": "Deletar Usuário",
+        "request": {
+          "method": "DELETE",
+          "url": {
+            "raw": "http://localhost:3000/api/usuarios/1",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "usuarios", "1"]
+          }
+        }
+      }
+    ]
+  }
+  
