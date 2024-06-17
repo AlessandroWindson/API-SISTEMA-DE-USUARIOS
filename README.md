@@ -1,4 +1,4 @@
-## **API SISTEMA DE USUÁRIOS**
+## **API - SISTEMA DE USUÁRIOS**
 
 **Este é um projeto de API para um sistema de usuários, desenvolvido em Node.js utilizando Express e Sequelize como ORM (Object-Relational Mapping). A API permite operações básicas de CRUD (Create, Read, Update, Delete) para gerenciar usuários em um banco de dados MySQL.**
 
