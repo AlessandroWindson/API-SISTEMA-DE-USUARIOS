@@ -16,16 +16,14 @@ Para começar a usar esta API, é fundamental que você tenha um ambiente de des
 
 ### **Clone este repositório:**
 
-```bash
-bashCopiar código
+```
 git clone https://github.com/LuannaBheatriz/API-Gerenciador-de-Tarefas.git
 
 ```
 
 ### **Navegue até o diretório do projeto:**
 
-```bash
-bashCopiar código
+```
 cd GERENCIADOR-DE-TAREFAS-API
 
 ```
@@ -46,23 +44,20 @@ Express: Framework web para Node.js.
 
 ### Criar um novo diretório para o projeto:
 
-```bash
-bashCopiar código
+```
 mkdir meu-projeto-express
 cd meu-projeto-express
 ```
 
 ### Inicializar um novo projeto Node.js (se ainda não tiver um):
 
-```bash
-bashCopiar código
+```
 npm init -y
 ```
 
 ### Instalar o Express:
 
-```bash
-bashCopiar código
+```
 npm install express
 ```
 
@@ -73,36 +68,31 @@ Sequelize: ORM (Object-Relational Mapping) para Node.js.
 
 ### Instalar o Sequelize CLI (opcional, mas recomendado para migrations):
 
-```bash
-bashCopiar código
+```
 npm install --save-dev sequelize-cli
 ```
 
 ### Instalar o Sequelize e o driver do banco de dados (por exemplo, mysql2):
 
-```bash
-bashCopiar código
+```
 npm install sequelize mysql2
 ```
 
 ### Inicializar um projeto Sequelize (se ainda não tiver um):
 
-```bash
-bashCopiar código
+```
 npx sequelize-cli init
 ```
 
 ### Criar um modelo e migration (exemplo):
 
-```bash
-bashCopiar código
+```
 npx sequelize-cli model:generate --name Usuario --attributes nome:string,email:string,senha:string
 ```
 
 ### Executar as migrations para criar tabelas no banco de dados:
 
-```bash
-bashCopiar código
+```
 npx sequelize-cli db:migrate
 ```
 
@@ -113,15 +103,13 @@ MySQL2: Pacote para conexão com MySQL em Node.js.
 
 ### Instalar o pacote MySQL2 globalmente (se ainda não tiver):
 
-```bash
-bashCopiar código
+```
 npm install -g mysql2
 ```
 
 ### Acessar o MySQL via terminal:
 
-```bash
-bashCopiar código
+```
 mysql -u root -p
 ```
 
@@ -132,24 +120,21 @@ Estes comandos devem ser executados no terminal dentro do diretório do seu proj
 ### Criação do Banco de Dados MySQL
 Acesso ao MySQL pelo terminal:
 
-```bash
-bashCopiar código
+```
 mysql -u root -p
 ```
 Isso abrirá o prompt do MySQL. Insira sua senha quando solicitado.
 
 ### Criação do Banco de Dados:
 
-```bash
-bashCopiar código
+```
 CREATE DATABASE sistema_de_usuarios_development;
 ```
 Substitua sistema_de_usuarios_development pelo nome desejado para o seu banco de dados.
 
 ### Verificar se o banco de dados foi criado:
 
-```bash
-bashCopiar código
+```
 SHOW DATABASES;
 ```
 Isso listará todos os bancos de dados existentes, incluindo o novo que você acabou de criar.
@@ -164,7 +149,6 @@ Se você já configurou o Sequelize anteriormente como foi descrito, provavelmen
 **Renomeie o arquivo `.env.example` para `.env` e edite-o com as configurações do seu banco de dados MySQL:**
 
 ```
-envCopiar código
 DB_HOST=127.0.0.1
 DB_USER=root
 DB_PASS=senha123@
@@ -175,7 +159,7 @@ DB_NAME=database_development
 ### Configuração no Sequelize:
 No arquivo de configuração do Sequelize (config/config.js), ajuste as configurações para usar as variáveis de ambiente definidas no arquivo .env. Um exemplo básico de configuração pode ser:
 
-```bash
+```
 require('dotenv').config();
 
 module.exports = {
@@ -193,7 +177,7 @@ module.exports = {
 ### Sincronização com o Banco de Dados:
 No arquivo onde você inicializa o Sequelize (models/index.js), adicione o código para autenticar e sincronizar com o banco de dados. Geralmente, isso já é feito automaticamente se você seguiu o padrão gerado pelo Sequelize CLI. Por exemplo:
 
-```bash
+```
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
   host: process.env.DB_HOST,
@@ -215,7 +199,7 @@ module.exports = sequelize;
 ### Execução das Migrations (se aplicável):
 Se você estiver usando Sequelize migrations para criar suas tabelas, execute o comando a seguir para aplicar as migrations ao banco de dados:
 
-```bash
+```
 npx sequelize-cli db:migrate
 ```
 Esse comando aplicará todas as migrations pendentes e criará as tabelas no banco de dados de acordo com os modelos definidos.
@@ -230,7 +214,7 @@ Agora que a API está instalada e configurada corretamente, você está pronto p
 
 1. **Inicie o servidor com o seguinte comando:**
 
-```bash
+```
 npm run dev
 ```
 
