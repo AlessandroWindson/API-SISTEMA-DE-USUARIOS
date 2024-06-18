@@ -2,10 +2,12 @@ const express = require('express');
 const router = express.Router();
 const UsuarioController = require('../controllers/UsuarioController');
 
-router.post('/usuarios', UsuarioController.criarUsuario);
-router.get('/usuarios', UsuarioController.listarUsuarios);
-router.get('/usuarios/:id', UsuarioController.obterUsuarioPorId);
-router.put('/usuarios/:id', UsuarioController.atualizarUsuario);
-router.delete('/usuarios/:id', UsuarioController.deletarUsuario);
+// Remova '/usuarios' de cada rota, pois isso já é tratado ao montar o roteador
+
+router.post('/', UsuarioController.criarUsuario);
+router.get('/', UsuarioController.listarUsuarios);
+router.get('/:id', UsuarioController.obterUsuarioPorId);
+router.put('/:id', UsuarioController.atualizarUsuario);
+router.delete('/:id', UsuarioController.deletarUsuario);
 
 module.exports = router;
