@@ -17,14 +17,14 @@ Para começar a usar esta API, é fundamental que você tenha um ambiente de des
 ### **Clone este repositório:**
 
 ```
-git clone https://github.com/LuannaBheatriz/API-Gerenciador-de-Tarefas.git
+git clone https://github.com/AlessandroWindson/API-SISTEMA-DE-USUARIOS.git
 
 ```
 
 ### **Navegue até o diretório do projeto:**
 
 ```
-cd GERENCIADOR-DE-TAREFAS-API
+cd SISTEMA-DE-USUARIOS-API
 
 ```
 
